@@ -2,7 +2,7 @@ import React from 'react';
 
 const Scroll = (props) => {
     return (
-        <div style={{overflowY: 'scroll', border: '1px solid black'}}>
+        <div className='pa4 ma4 vh-75-ns overflow-y-scroll '>
             {props.children}
         </div>
     );
