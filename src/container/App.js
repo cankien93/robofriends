@@ -18,7 +18,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch)=>{
     return {
-        onSearchChange: (event)=> dispatch(setSearchField(event.target.value)),
+        onSearchChange: (event)=> {
+            dispatch(setSearchField(event.target.value));
+            console.log(event.target.value)
+        },
         onRequestRobots: () => dispatch(requestRobots())
     }
 }
@@ -41,7 +44,7 @@ class App extends Component {
         } else {
             return (
                 <div className='tc'>
-                    <h1>ROBOFRIENDS</h1>
+                    <h1 style={{color:'lightblue'}}>ROBOFRIENDS</h1>
                     <SearchBox searchchange={onSearchChange} />
                     <Scroll className='ma3'>
                         <CardList  robots={searchfilter} />
