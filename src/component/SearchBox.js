@@ -5,9 +5,10 @@ import React from 'react';
 const SearchBox = ({searchfield, searchchange}) => {
     return (
         <div>
-            <label for="search">Search</label>
+            <label for="searchbox">Search</label>
             <input 
                 type = 'text' 
+                id='searchbox'
                 placeholder='input here'
                 onChange = {searchchange}
             />
